@@ -1,0 +1,58 @@
+body {
+    padding: 1.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+#listaDeViagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 1.78rem auto;
+}
+
+.botoes {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.apagando {
+    animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Removendo a barra de status dos botões */
+.nes-btn {
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px 16px;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.nes-btn::before {
+    display: none;
+}
+
+.nes-btn.is-success::after,
+.nes-btn.is-error::after,
+.nes-btn.is-primary::after {
+    display: none;
+}
